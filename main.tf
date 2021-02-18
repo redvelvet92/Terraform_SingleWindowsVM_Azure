@@ -8,6 +8,17 @@
 # All Variables are pulled from Variables.tf
 
 # Configure the Microsoft Azure Provider
+
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.46.0"
+    }
+  }
+}
+
+
 provider "azurerm" {
   features {}
 }
