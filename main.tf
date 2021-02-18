@@ -107,10 +107,9 @@ resource "azurerm_public_ip" "terraform_test_pip" {
     name = "${var.prefix}-ip"
     location = "${var.location}"
     resource_group_name = "${azurerm_resource_group.test_terraform_usnc_rg.name}"
-    public_ip_address_allocation = "Dynamic"
-    domain_name_label = "${var.hostname}"
-
-    
+    allocation_method = "Dynamic"
+    sku = "Standard"
+   
 }
 
 
