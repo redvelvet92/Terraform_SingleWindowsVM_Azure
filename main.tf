@@ -7,6 +7,10 @@
 # Along with a Windows Server Running IIS.
 # All Variables are pulled from Variables.tf
 
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+}
 
 
 # Resource Group Resource
