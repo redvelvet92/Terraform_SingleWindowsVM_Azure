@@ -87,7 +87,7 @@ variable "admin_password" {
 
 variable "source_network" {
     description = "Allow access from this network prefix, defaults at '*'."
-    default = "*"
+    default = "50.80.38.71"
 }
 
 variable "vm_extension" {
