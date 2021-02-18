@@ -89,15 +89,14 @@ resource "azurerm_network_interface" "terraform_test_windowsnic" {
     location = "${var.location}"
     resource_group_name = "${azurerm_resource_group.test_terraform_usnc_rg.name}"
 
-    ip_configuration {}
-        name = "Internal"
+    ip_configuration {
         subnet_id = "${azurerm_subnet.subnet.id}"
         private_ip_address_allocation = "Dynamic"
         
     }
 
     
-
+}
 
 
 # Public IP Resource 
