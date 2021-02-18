@@ -154,7 +154,6 @@ resource "azurerm_virtual_machine" "website" {
 
 resource "azurerm_virtual_machine_extension" "iiswebextension" {
     name = "${var.vm_extension}"
-    location = "${var.location}"
     virtual_machine_id   = azurerm_virtual_machine.website.id
     publisher            = "Microsoft.Powershell"
     type                 = "DSC"
